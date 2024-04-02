@@ -1,42 +1,85 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(90deg, rgb(18, 93, 172) 0%, rgb(10, 153, 193) 0%, rgb(43, 240, 204) 100%);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+h1{
   text-align: center;
+  font-size: 3rem;
+  color: white;
+  font-weight: 800;
+  font-family: "poppins";
+  padding: 50px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container {
+
+  padding: 20px;
+  margin: 0 auto;
+  width: 600px;
+  overflow-y: auto;
+  height: 100%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#new-task{
+  position: relative;
+
+  padding: 1.8em 1.25em;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 1.25em 1.8em rgba(1, 24, 48, 0.15);
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#new-task input {
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-bottom: 2px solid #d1d3d4;
+  color: #111111;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 0.8em 0.5em;
 }
 
-.card {
-  padding: 2em;
+#new-task input:focus{
+  outline: none;
+  border-color: #0b87ff;
+}
+#new-task button {
+  font-family: "Poppins", sans-serif;
+  background-color:#5292ec ;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  border-radius: 0.3em;
 }
 
-.read-the-docs {
-  color: #888;
+#new-task ul li button{
+cursor: pointer;
+padding: 10px 10px;
+margin: 10px;
 }
+
+#new-task ul li .delete{
+  background-color: red;
+}
+
+#new-task ul li .edit{
+  background-color: green;
+}
+
+
+
