@@ -31,7 +31,6 @@ h1{
 
 #new-task{
   position: relative;
-
   padding: 1.8em 1.25em;
   background-color: white;
   border-radius: 5px;
@@ -73,13 +72,61 @@ padding: 10px 10px;
 margin: 10px;
 }
 
-#new-task ul li .delete{
+.list{
+  width: 100%;
+  margin-top: 20px;
+  background: lightblue;
+  padding: 0.8em 0.5em;
+  border-radius: 5px;
+}
+
+.list ul{
+  list-style: none;
+}
+
+.list ul li {
+  margin-bottom: 10px;
+}
+
+.list button{
+  margin-right: 10px;
+  padding: 10px 10px;
+  border-radius: 0.3em;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.task{
+  background-color: #ffffff;
+  padding: 0.3em 0.6em;
+  margin-top: 0.6em;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #d1d3d4;
+  cursor: pointer;
+}
+
+.delete{
   background-color: red;
 }
 
-#new-task ul li .edit{
+.edit{
   background-color: green;
 }
+
+.cancel{
+  background-color: yellowgreen;
+}
+.todo-item
+{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+
+
 
 
 
