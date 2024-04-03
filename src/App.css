@@ -27,6 +27,7 @@ h1{
   width: 600px;
   overflow-y: auto;
   height: 100%;
+  text-align: center;
 }
 
 #new-task{
@@ -124,6 +125,12 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 }
+
+.line_through{
+  text-decoration: line-through;
+  background-color: lightsalmon;
+}
+
 
 
 
