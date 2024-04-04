@@ -49,40 +49,6 @@ const handleEdit = (id , todo) =>
 }
 
 
-const sortedTodos = todos.sort((a,b) => {
-  
-  const priorityA = a.priority;
-  const priorityB = b.priority;
-  
-
-
-
-  if (priorityA === "High") {
-    return 1;
-  } 
-
-  if(priorityB === "Mediam") {
-    return 2;
-  }
-  if(priorityC === "Low") {
-    return 3;
-  }
-});
-console.log("hwechweuilqcdheikh",sortedTodos);
-
-
-
-
-
-// todos.sort((a, b) =>{
-//   const sortingOrder = {High:1, Medium:2, Low:3}
-//   return sortingOrder[a.priority] - sortingOrder[b.priority];
-// } );
-
-
-
-
-
 
 
 
@@ -104,8 +70,6 @@ console.log("hwechweuilqcdheikh",sortedTodos);
             {todo.priority} 
         </p>
 
-        
-
         <div>
           <button className='delete' onClick={() => handleDelete(todo.id)}>Delete</button>
           <button className='edit' onClick={() => handleEdit(todo.id, todo)}>Edit</button>
@@ -120,12 +84,5 @@ console.log("hwechweuilqcdheikh",sortedTodos);
 :
 <div className="" style={{marginTop:"20px", backgroundColor:"white", padding:"10px 10px ", color:"red"}}>No Data Available</div>
  }
-
     </>
 }
-
-
-// useEffect(() => {
-//   const sortedTodos = todos.sort((a, b) => b.priority - a.priority);
-//   setTodos(sortedTodos);
-// }, [todos]);
