@@ -1,6 +1,6 @@
 import { useState , useEffect } from "react";
 import { TodoForm } from "../components/TodoForm"
-import { TodoList } from "../components/TodoList";
+// import { TodoList } from "../components/TodoLists";
 
 
 export const Todo = () =>
@@ -61,11 +61,22 @@ export const Todo = () =>
     setInputValue(null)
   }
   
+  const handleEdit = (id , todo) =>
+  {
+    setInputValue(todo)
+    setShow(true) 
+  }
+
+  const handleDelete = (id) =>
+  {
+    setTodos(todos.filter((item)=> item.id !== id))
+  }
   
     return(
         <>
-        <TodoForm   todos={todos} setTodos={setTodos} handleSubmit={handleSubmit} handleChange={handleChange} inputValue={inputValue} show={show} setInputValue={setInputValue} setShow={()=>setShow(false)} setPriority={setPriority} priority={priority} />
-        <TodoList todos={todos} show={show} setTodos={setTodos} setInputValue={setInputValue} setShow={setShow} priority={priority} />
+        <TodoForm   todos={todos} setTodos={setTodos} handleSubmit={handleSubmit} handleChange={handleChange} inputValue={inputValue} show={show} setInputValue={setInputValue} setShow={setShow} setPriority={setPriority} priority={priority} handleDelete={handleDelete}  handleEdit={handleEdit}/>
+        
+        {/* <TodoList todos={todos} show={show} setTodos={setTodos} setInputValue={setInputValue} setShow={setShow} priority={priority} /> */}
         </>
     )
 }

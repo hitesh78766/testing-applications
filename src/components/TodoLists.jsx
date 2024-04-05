@@ -1,9 +1,10 @@
 
 import { useEffect } from "react";
-export const TodoList = ({todos,show,setTodos,setInputValue,setShow,priority}) =>
+export const TodoLists = ({todos,setTodos,setInputValue,setShow}) =>
 {
   // console.log(todos ,"here")
 
+ 
   const handleStatus  = (id) => {
       
     setTodos(todos.map(todo =>{
@@ -48,15 +49,17 @@ const handleEdit = (id , todo) =>
   setShow(true) 
 }
 
-
-
+todos.sort((a, b) =>{
+  const sortingOrder = {High:1, Medium:2, Low:3}
+  return sortingOrder[a.priority] - sortingOrder[b.priority];
+} );
 
 
     return<>
     {todos.length ? 
 
 <div className='list'>
-<ul>
+  <ul>
   {todos.map((todo, index) => (
     <li key={index}>
       <div className="todo-item">     
@@ -66,6 +69,7 @@ const handleEdit = (id , todo) =>
         <button onClick={() => handleStatus(todo.id)} style={{ backgroundColor: todo.status ? 'green' : 'pink' }}>
                   {todo.status ? "completed" : "pending"  } 
         </button>
+        
         <p>
             {todo.priority} 
         </p>
@@ -73,7 +77,6 @@ const handleEdit = (id , todo) =>
         <div>
           <button className='delete' onClick={() => handleDelete(todo.id)}>Delete</button>
           <button className='edit' onClick={() => handleEdit(todo.id, todo)}>Edit</button>
-          
         </div>
  
       </div>
@@ -84,5 +87,6 @@ const handleEdit = (id , todo) =>
 :
 <div className="" style={{marginTop:"20px", backgroundColor:"white", padding:"10px 10px ", color:"red"}}>No Data Available</div>
  }
+
     </>
 }
