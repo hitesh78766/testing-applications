@@ -50,7 +50,7 @@ h1{
   color: #111111;
   font-size: 1em;
   font-weight: 500;
-  /* padding: 0.8em 0.5em; */
+
 }
 
 #new-task input:focus{
@@ -72,7 +72,7 @@ h1{
   color: white;
   cursor: pointer;
   border-radius: 0.3em;
-  /* padding: 5px 40px; */
+
   margin-left: 25px;
 }
 

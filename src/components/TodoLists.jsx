@@ -40,7 +40,8 @@ export const TodoLists = ({todos,setTodos,setInputValue,setShow}) =>
 
   const handleDelete = (id) =>
   {
-    setTodos(todos.filter((item)=> item.id !== id))
+    const newTodos = todos.filter((item)=> item.id !== id);
+    setTodos(newTodos)
   }
 
 const handleEdit = (id , todo) =>

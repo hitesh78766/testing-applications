@@ -5,7 +5,6 @@ export const TodoTask = ({ todo , handleCheckbox, handleStatus, handleDelete, ha
   return (
     <div className='list'>
       <ul>
-  
           <li  >
             <div className="todo-item">
 
@@ -23,8 +22,7 @@ export const TodoTask = ({ todo , handleCheckbox, handleStatus, handleDelete, ha
                 <button className='delete' onClick={() => handleDelete(todo.id)}>Delete</button>
                 <button className='edit' onClick={() => handleEdit(todo.id, todo)}>Edit</button>
               </div>
-
-
+              
             </div>
           </li>
        
